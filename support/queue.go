@@ -19,6 +19,8 @@ type Queue[E any] interface {
 	Peek() (E, bool)
 	Enqueue(E) bool
 	Dequeue() (E, bool)
+	Remove(E)
+	RemoveWhere(func(E) bool)
 }
 
 // BlockingQueue blocking queue interface
