@@ -33,3 +33,23 @@ type Queue interface {
 	// Progress progress
 	Progress() (pending int64, executing int64)
 }
+
+// AbstractQueue abstract queue
+type AbstractQueue struct {
+	Queue
+	events event.Dispatcher
+}
+
+// Subscribe subscribe
+func (q *AbstractQueue) Subscribe(subscriber event.Subscriber) {
+	if q.events != nil {
+		q.events.Subscribe(subscriber)
+	}
+}
+
+// DispatchEvent dispatch event
+func (q *AbstractQueue) DispatchEvent(event event.Event) {
+	if q.events != nil {
+		q.events.Dispatch(event)
+	}
+}
