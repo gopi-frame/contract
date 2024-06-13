@@ -2,12 +2,10 @@ package queue
 
 import "github.com/google/uuid"
 
-type Queueable interface {
+type FailedJob interface {
 	GetID() uint64
 	GetUUID() uuid.UUID
 	GetQueue() string
 	GetPayload() Job
-	GetAttempts() uint
-	Fire()
-	Fail(error)
+	GetException() string
 }

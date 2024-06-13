@@ -9,11 +9,11 @@ type Container interface {
 	// Get get an instance
 	Get(string) any
 	// Bind bind abstract an concrate
-	Bind(abstract string, concrate func(Container) any)
+	Bind(abstract string, concrate func() any)
 	// BindIf bind if abstract is not bound
-	BindIf(abstract string, concrate func(Container) any)
+	BindIf(abstract string, concrate func() any)
 	// Alias set alias for name
 	Alias(abstract string, alias string)
 	// Extend extend
-	Extend(abstract string, extender ...func(instance any, container Container) any)
+	Extend(abstract string, extender ...func(instance any) any)
 }
