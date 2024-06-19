@@ -1,10 +1,5 @@
 package queue
 
-type Queue interface {
-	Queue() string
-	Count() int64
-	Empty() bool
-	Enqueue(Job)
-	Dequeue() Job
-	Remove(Job)
+type Driver interface {
+	Open(options map[string]any) (Queue, error)
 }
