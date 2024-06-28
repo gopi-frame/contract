@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Jsonable jsonable
 type Jsonable interface {

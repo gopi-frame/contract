@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Comparator comparator
 type Comparator[T any] interface {

@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Sortable sortable
 type Sortable[T any] interface {

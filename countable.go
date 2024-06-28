@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Countable countable
 type Countable interface {

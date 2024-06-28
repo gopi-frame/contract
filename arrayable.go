@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Arrayable arrayable
 type Arrayable[E any] interface {

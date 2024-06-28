@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Traversable traversable
 type Traversable[K any, V any] interface {

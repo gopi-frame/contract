@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Mapable mapable
 type Mapable[K comparable, V any] interface {

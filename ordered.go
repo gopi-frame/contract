@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Ordered ordered interface
 type Ordered interface {

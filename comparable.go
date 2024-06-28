@@ -1,4 +1,4 @@
-package support
+package contract
 
 // Comparable comparable
 type Comparable interface {
