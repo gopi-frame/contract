@@ -1,7 +1,7 @@
-package event
+package eventbus
 
-// Dispatcher interface
-type Dispatcher interface {
+// Bus interface
+type Bus interface {
 	// Listen listen
 	Listen(topic []Event, listeners ...Listener)
 	// HasListener has listener

@@ -1,4 +1,4 @@
-package event
+package eventbus
 
 // Event event interface
 type Event interface {
