@@ -1,3 +1,3 @@
 module github.com/gopi-frame/contract/router
 
-go 1.22.4
+go 1.22.2

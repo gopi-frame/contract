@@ -1,3 +1,3 @@
 module github.com/gopi-frame/contract/response
 
-go 1.22.4
+go 1.22.2

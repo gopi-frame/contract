@@ -1,6 +1,6 @@
 module github.com/gopi-frame/contract/database
 
-go 1.22.4
+go 1.22.2
 
 require gorm.io/gorm v1.25.11
 
