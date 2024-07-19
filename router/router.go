@@ -9,7 +9,7 @@ import (
 type Router interface {
 	http.Handler
 	Use(...Middleware)
-	Group(RouterGroup, func(Router)) Router
+	Group(RouteGroup, func(Router)) Router
 	GET(path string, handler func(request *http.Request) response.Responser) Route
 	POST(path string, handler func(request *http.Request) response.Responser) Route
 	PUT(path string, handler func(request *http.Request) response.Responser) Route

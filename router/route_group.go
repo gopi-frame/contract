@@ -1,5 +1,5 @@
 package router
 
-type RouterGroup interface {
+type RouteGroup interface {
 	Build() Router
 }
