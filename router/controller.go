@@ -3,7 +3,7 @@ package router
 import "net/http"
 
 type Controller interface {
-	RouterGroup() RouteGroup
+	RouteGroup() RouteGroup
 }
 
 type ConstructableController interface {

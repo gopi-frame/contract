@@ -7,7 +7,7 @@ import (
 )
 
 type Middleware interface {
-	Handle(*http.Request, func(*http.Request) rc.Responser) rc.Responser
+	Handle(*http.Request, Handler) rc.Responser
 }
 
 type ConstructableMiddleware interface {
