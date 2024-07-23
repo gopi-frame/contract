@@ -3,9 +3,9 @@ package eventbus
 // Bus interface
 type Bus interface {
 	// Listen listen
-	Listen(topic []Event, listeners ...Listener)
+	Listen(topic []string, listeners ...Listener)
 	// HasListener has listener
-	HasListener(topic Event) bool
+	HasListener(topic string) bool
 	// Subscribe adds an subscriber
 	Subscribe(subscriber Subscriber)
 	// Dispatch dispatches an event
