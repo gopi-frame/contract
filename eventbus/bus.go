@@ -9,5 +9,5 @@ type Bus interface {
 	// Subscribe adds an subscriber
 	Subscribe(subscriber Subscriber)
 	// Dispatch dispatches an event
-	Dispatch(event Event)
+	Dispatch(event Event) error
 }

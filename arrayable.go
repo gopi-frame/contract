@@ -1,3 +1,4 @@
+// Package contract provides interfaces and types for Gopi frame.
 package contract
 
 // Arrayable arrayable

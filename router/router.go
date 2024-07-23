@@ -20,4 +20,6 @@ type Router interface {
 	OPTIONS(path string, handler Handler) Route
 	HEAD(path string, handler Handler) Route
 	Route(methods []string, path string, handler Handler) Route
+	OnNotFound(handler Handler)
+	OnMethodNotAllowed(handler Handler)
 }
