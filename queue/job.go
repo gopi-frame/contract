@@ -1,6 +1,8 @@
 package queue
 
-import "time"
+import (
+	"time"
+)
 
 // Job is a job interface
 type Job interface {
