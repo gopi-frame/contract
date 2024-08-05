@@ -1,4 +1,7 @@
 # Contract
+[![Go Reference](https://pkg.go.dev/badge/github.com/gopi-frame/contract.svg)](https://pkg.go.dev/github.com/gopi-frame/contract)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gopi-frame/contract)](https://goreportcard.com/report/github.com/gopi-frame/contract)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Package contract provides interfaces and types for Gopi frame.
 
