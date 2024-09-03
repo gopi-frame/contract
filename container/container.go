@@ -7,7 +7,7 @@ type Container[T any] interface {
 	// Get gets a value from the container by name or creates a new one firstly if not found.
 	// If you want to always get a new instance of the value, use [Make] instead.
 	Get(name string) T
-	// GetE gets a value from the container by name but returns error if the value is not found or cannot be created.
+	// GetE gets a value from the container by name but returns exception if the value is not found or cannot be created.
 	// If you want to always get a new instance of the value, use [Make] instead.
 	GetE(name string) (T, error)
 	// Has checks if the container has a value or a constructor by name

@@ -20,9 +20,9 @@ type Logger interface {
 	Warn(message string)
 	// Warnf logs a formatted message at warn level.
 	Warnf(format string, args ...any)
-	// Error logs a message at error level.
+	// Error logs a message at exception level.
 	Error(message string)
-	// Errorf logs a formatted message at error level
+	// Errorf logs a formatted message at exception level
 	Errorf(format string, args ...any)
 	// Panic logs a message at panic level
 	Panic(message string)
