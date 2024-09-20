@@ -16,6 +16,7 @@ type Error interface {
 	error
 	Code() string
 	Message() string
+	SetMessage(message string) Error
 	Params() []Param
 	AddParam(param Param) Error
 }
@@ -47,6 +48,8 @@ type ErrorBag interface {
 	GetErrors(key string) Errors
 	// GetError returns the error for the given key and code.
 	GetError(key string, code string) Error
+	// SetMessages sets custom error messages
+	SetMessages(messages map[string]map[string]string) ErrorBag
 	// GetMessages returns the messages in the error bag.
 	GetMessages() map[string][]string
 	// GetMessage returns the messages for the given key.

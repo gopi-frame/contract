@@ -21,10 +21,10 @@ type ValidatorBuilder interface {
 	SetAttribute(attribute string) ValidatorBuilder
 	// GetAttribute gets the attribute name.
 	GetAttribute() string
-	// SetPath sets the attribute path.
-	SetPath(paths ...string) ValidatorBuilder
-	// GetPath gets the attribute path.
-	GetPath() []string
+	// SetKey sets the attribute key parts.
+	SetKey(paths ...string) ValidatorBuilder
+	// GetKey gets the attribute key parts.
+	GetKey() []string
 }
 
 // Validatable is the interface for creating validatable types on the client side.
