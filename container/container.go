@@ -12,8 +12,8 @@ type Container[T any] interface {
 	GetE(name string) (T, error)
 	// Has checks if the container has a value or a constructor by name
 	Has(name string) bool
-	// Lazy sets a constructor function that will be called when the value is accessed
-	Lazy(name string, constructor func() (T, error))
+	// Defer sets a constructor function that will be called when the value is accessed
+	Defer(name string, constructor func() (T, error))
 	// Make makes a new instance of the value, If the value is a constructor function, it will call it
 	Make(name string) (T, error)
 }

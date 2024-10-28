@@ -1,4 +1,4 @@
-package contract
+package exception
 
 import "github.com/gopi-frame/contract"
 
