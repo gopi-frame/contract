@@ -1,6 +1,8 @@
 package cache
 
-import "time"
+import (
+	"time"
+)
 
 // Cache is an interface for caching data.
 type Cache interface {
@@ -17,4 +19,12 @@ type Cache interface {
 	Has(key string) bool
 	// Clear clears the cache.
 	Clear() error
+}
+
+type CacheManager interface {
+	Cache
+	SetDefaultStore(name string)
+	HasStore(name string) bool
+	AddStore(name string, store Cache)
+	GetStore(name string) Cache
 }

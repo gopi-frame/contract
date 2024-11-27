@@ -1,8 +1,9 @@
 package repository
 
 import (
-	"github.com/go-viper/mapstructure/v2"
 	"time"
+
+	"github.com/go-viper/mapstructure/v2"
 )
 
 type Repository interface {
@@ -29,15 +30,16 @@ type Repository interface {
 	Anys(path string, defaultValue ...[]any) []any
 	AnyMap(path string, defaultValue ...map[string]any) map[string]any
 	Keys() []string
-	All() map[string]any
+	Paths() []string
+	ToMap() map[string]any
 	Cut(path string) Repository
-	Set(key string, value any)
-	Has(key string) bool
-	Get(key string) any
-	Delete(key string)
+	Set(path string, value any) error
+	Has(path string) bool
+	Get(path string) (any, error)
+	Delete(path string) error
 	Unmarshal(path string, obj any, conf *mapstructure.DecoderConfig) error
 	Load(provider Provider, parser Parser) error
 	LoadAt(path string, provider Provider, parser Parser) error
-	Merge(in Repository)
-	MergeAt(path string, in Repository)
+	Merge(in Repository) (Repository, error)
+	MergeAt(path string, in Repository) (Repository, error)
 }

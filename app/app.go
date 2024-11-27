@@ -2,7 +2,6 @@ package app
 
 import (
 	"github.com/gopi-frame/contract/container"
-	"github.com/gopi-frame/contract/repository"
 )
 
 // App is the interface for the application.
@@ -22,12 +21,10 @@ type App interface {
 	WorkingDirectory() string
 	// StoragePath returns the storage path of the application.
 	StoragePath() string
+	// ResourcePath returns the resource path of the application.
+	ResourcePath() string
 	// ConfigPath returns the config path of the application.
 	ConfigPath() string
-	// Configure registers a component configuration.
-	Configure(component, path string)
-	// Config returns the config of the application.
-	Config(components ...string) repository.Repository
 	// Register registers a provider.
-	Register(component Component)
+	Register(component Component) error
 }

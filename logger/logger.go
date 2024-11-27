@@ -1,6 +1,8 @@
 package logger
 
-import "context"
+import (
+	"context"
+)
 
 // Logger logger interface
 type Logger interface {
@@ -32,4 +34,23 @@ type Logger interface {
 	Fatal(message string)
 	// Fatalf logs a formatted message at fatal level
 	Fatalf(format string, args ...any)
+}
+
+// LoggerManager is a logger manager and also a logger itself.
+type LoggerManager interface {
+	Logger
+	// SetDefault sets the default channel name.
+	SetDefault(name string)
+	// HasChannel returns true if the channel with the given name exists.
+	HasChannel(name string) bool
+	// SetChannel sets the channel with the given name.
+	SetChannel(name string, channel Logger)
+	// GetChannel returns the channel with the given name.
+	GetChannel(name string) Logger
+	// GetChannels returns all channels.
+	GetChannels() map[string]Logger
+	// RemoveChannel removes the channel with the given name.
+	RemoveChannel(name string)
+	// GetChannelBundle returns a bundle of channels.
+	GetChannelBundle(names ...string) Logger
 }

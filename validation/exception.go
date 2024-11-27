@@ -18,6 +18,7 @@ type Error interface {
 	Message() string
 	SetMessage(message string) Error
 	Params() []Param
+	HasParam(key string) bool
 	AddParam(param Param) Error
 }
 
@@ -30,7 +31,7 @@ type Errors interface {
 
 // ErrorBag is a interface for error bags.
 type ErrorBag interface {
-	error
+	Error
 	Each(f func(path string, errs Errors) bool)
 	// Fails returns true if the error bag has one or more errors.
 	Fails() bool

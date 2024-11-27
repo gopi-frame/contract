@@ -1,9 +1,10 @@
 package translator
 
 import (
-	"golang.org/x/text/language"
 	"io/fs"
 	"net/http"
+
+	"golang.org/x/text/language"
 )
 
 // Translator is the interface for creating localizers.
@@ -13,7 +14,7 @@ type Translator interface {
 	// P translates a message with a plural count.
 	P(id string, pluralCount any, data ...any) string
 	// M translates a [Message]
-	M(msg Message) string
+	M(msg Message, pluralCount any, data ...any) string
 	// Locale creates a translator for the given languages.
 	Locale(languages ...string) Translator
 	// AddMessages adds messages to the bundle.
