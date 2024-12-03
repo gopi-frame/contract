@@ -29,4 +29,6 @@ type Group interface {
 	Name() string
 	// Commands returns the commands of the group.
 	Commands() []Command
+	// AddCommand adds a new command to the group.
+	AddCommand(command Command)
 }

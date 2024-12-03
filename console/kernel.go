@@ -1,7 +1,7 @@
 package console
 
 type Kernel interface {
-	AddGroup(group Group)
+	AddGroup(id, name string, fn func(group Group))
 	AddCommand(command Command)
 	AddFlag(flag Flag)
 	AddPersistentFlag(flag Flag)
