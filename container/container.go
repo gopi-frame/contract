@@ -12,6 +12,8 @@ type Container[T any] interface {
 	GetE(name string) (T, error)
 	// Has checks if the container has a value or a constructor by name
 	Has(name string) bool
+	// Remove removes a value from the container by name
+	Remove(name string)
 	// Defer sets a constructor function that will be called when the value is accessed
 	Defer(name string, constructor func() (T, error))
 	// Make makes a new instance of the value, If the value is a constructor function, it will call it
