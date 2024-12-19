@@ -11,8 +11,6 @@ type App interface {
 	Name() string
 	// Version returns the version of the application.
 	Version() string
-	// Run runs the application.
-	Run() error
 	// Debug returns true if the application is in debug mode.
 	Debug() bool
 	// Root returns the root path of the application.
@@ -27,4 +25,10 @@ type App interface {
 	ConfigPath() string
 	// Register registers a provider.
 	Register(component Component) error
+	// MustRegister registers a provider.
+	MustRegister(component Component)
+	// Unregister unregisters a provider.
+	Unregister(component Component) error
+	// Run runs the application.
+	Run() error
 }

@@ -4,6 +4,8 @@ package app
 type Component interface {
 	Name() string
 	Register(App) error
+	Unregister(App) error
 	Boot() error
 	Booted() bool
+	Shutdown() error
 }
