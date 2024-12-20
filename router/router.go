@@ -12,6 +12,7 @@ type Router interface {
 	http.Handler
 	Use(...Middleware) Router
 	Group(RouteGroup, func(Router)) Router
+	Controller(Controller, func(Router)) Router
 	GET(path string, handler Handler) Route
 	POST(path string, handler Handler) Route
 	PUT(path string, handler Handler) Route
